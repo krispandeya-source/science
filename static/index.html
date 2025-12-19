@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaQuizAI - Science MCQ Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>📚 InstaQuizAI</h1>
+            <p class="subtitle">AI-Powered Science Quiz Generator (CDC Syllabus)</p>
+            <!-- Placeholder for Instagram integration -->
+            <div class="instagram-placeholder">
+                <button id="instagram-login" class="instagram-btn" disabled title="Coming Soon!">
+                    📷 Connect Instagram (Coming Soon)
+                </button>
+            </div>
+        </header>
+
+        <!-- Topic Selection Screen -->
+        <div id="topic-selection" class="screen active">
+            <h2>Select a Science Topic</h2>
+            <p>Choose a topic from the CDC syllabus to start your quiz</p>
+            <div id="topics-container" class="topics-grid">
+                <!-- Topics will be loaded dynamically -->
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <h2 id="quiz-topic">Quiz Topic</h2>
+                <div class="quiz-progress">
+                    <span id="current-question">1</span> / <span id="total-questions">5</span>
+                </div>
+            </div>
+            
+            <div id="questions-container">
+                <!-- Questions will be loaded dynamically -->
+            </div>
+
+            <div class="quiz-navigation">
+                <button id="prev-btn" class="btn btn-secondary" disabled>Previous</button>
+                <button id="next-btn" class="btn btn-primary">Next</button>
+                <button id="submit-btn" class="btn btn-success" style="display: none;">Submit Quiz</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <div class="results-container">
+                <h2>Quiz Results</h2>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <span id="score-percentage">0%</span>
+                    </div>
+                    <p class="score-text">
+                        You scored <strong id="score">0</strong> out of <strong id="total">0</strong>
+                    </p>
+                </div>
+
+                <div class="performance-message">
+                    <p id="performance-text"></p>
+                </div>
+
+                <!-- Instagram Share Placeholder -->
+                <div class="instagram-share-placeholder">
+                    <button class="btn btn-instagram" disabled title="Coming Soon!">
+                        📷 Share on Instagram Stories (Coming Soon)
+                    </button>
+                    <button class="btn btn-instagram" disabled title="Coming Soon!">
+                        💬 Challenge Friends via Instagram (Coming Soon)
+                    </button>
+                </div>
+
+                <div id="detailed-results">
+                    <h3>Detailed Results</h3>
+                    <div id="results-list">
+                        <!-- Detailed results will be shown here -->
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button id="try-again-btn" class="btn btn-primary">Try Another Quiz</button>
+                    <button id="retake-btn" class="btn btn-secondary">Retake Same Topic</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>InstaQuizAI - Powered by AI | Based on CDC Science Syllabus</p>
+        <p class="instagram-note">🚀 Instagram integration coming soon for sharing and challenges!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
